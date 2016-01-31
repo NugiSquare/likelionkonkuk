@@ -14,6 +14,40 @@
  *= require_self
  */
 body {
-	 background-image: url("/assets/bg.jpg");
-	 background-repeat: repeat;
+	background-image: url("/assets/bg.jpg");
+	background-repeat: repeat;
+	margin: 0;
+}
+#load {
+	height: 100vh;
+}
+#load_bt_norm {
+	z-index: 1;
+	/*vertical centered begins.*/
+	margin:auto auto;
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    /*vertical centered ends.*/
+}
+#to_main {
+	z-index: 100;
+	position: relative;
+	height: 100%;
+	width: 100%;
+	margin: auto;
+}
+#menu {
+	position: relative;
+	height: 100vh;
+}
+#main_image {
+	z-index: 1;
+	/*vertical centered begins.*/
+	margin:auto auto;
+	display: table;
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    /*vertical centered ends.*/
 }
