@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Likelionkonkuk</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <script type="text/javascript" src="skrollr.min.js"></script>
+  <script type="text/javascript">
+  	//skrollr begins.
+  	var s = skrollr.init();
+  	//skrollr ends.
+  	//skrollr menu begins.
+  	skrollr.menu.init();
+  	//skrollr menu ends.
+  </script>
+  
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>
