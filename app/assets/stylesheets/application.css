@@ -13,6 +13,14 @@
  *= require_tree .
  *= require_self
  */
+
+.fixed {
+	position: fixed; 
+	top: 0; 
+	height: 70px; 
+	z-index: 1;
+}
+
 body {
 	background-image: url("/assets/bg.jpg");
 	background-repeat: repeat;
@@ -53,12 +61,10 @@ body {
 	/*vertical centered ends.*/
 	max-width: 532px;
 }
-#navbar {
-}
 .bt {
-	display: inline;
+	/*display: inline;
 	margin-left: 3vh;
-	margin-right: 3vh;
+	margin-right: 3vh;*/
 }
 #intro_page {
 	height: 100%;
