@@ -61,6 +61,14 @@ body {
 	/*vertical centered ends.*/
 	max-width: 532px;
 }
+#menu_nav {
+	margin-bottom: 80px;
+}
+.main-nav-scrolled {
+  position: fixed;
+  width: 100%;
+  top: 0;
+ }
 .bt {
 	/*display: inline;
 	margin-left: 3vh;
