@@ -14,6 +14,7 @@
 	<script type="text/javascript" src="/assets/skrollr.min.js"></script>
 	<script type="text/javascript" src="/assets/skrollr.menu.min.js"></script>
 	<script type="text/javascript" src="/assets/jquery-1.12.0.min.js"></script>
+	<script type="text/javascript" src="/assets/jquery-ui.min.js"></script>
 	<script>
 		//skrollr begins.
 		var s = skrollr.init({
@@ -25,6 +26,7 @@
 	</script>
 	<script>
 	   $(document).ready(function(){
+	   		//nav
 		   $(window).bind('scroll', function() {
 		   var navHeight = $( window ).height()*3;
 				 if ($(window).scrollTop() > navHeight) {
@@ -33,6 +35,29 @@
 				 else {
 					 $('nav').removeClass('fixed');
 				 }
+			});
+			
+			//load
+			window.setInterval(function() {
+				$("#load_bt_norm").effect("pulsate",1000)
+			}, 5000);
+			$("#load_bt_norm").hover(
+				function(){
+					$(this).attr("src", "/assets/before_load/load_bt_hover.png");
+				},
+				function(){
+					$(this).attr("src", "/assets/before_load/load_bt_norm.png");
+				}
+			);
+			$("#load_bt_norm").click(function(){
+				$('html, body').animate({
+				    scrollTop: $("#menu").offset().top
+				}, 1300, 'easeInOutQuint');
+			});
+			$("#main_image").click(function(){
+				$('html, body').animate({
+				    scrollTop: $("#load").offset().top
+				}, 1300, 'easeInOutQuint');
 			});
 		});
 	</script>
