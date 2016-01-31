@@ -40,9 +40,10 @@
 			//load
 			window.setInterval(function() {
 				$("#load_bt_norm").effect("pulsate",1000)
-			}, 5000);
+			}, 10000);
 			$("#load_bt_norm").hover(
 				function(){
+					$(this).css( 'cursor', 'pointer' );
 					$(this).attr("src", "/assets/before_load/load_bt_hover.png");
 				},
 				function(){
@@ -54,6 +55,11 @@
 				    scrollTop: $("#menu").offset().top
 				}, 1300, 'easeInOutQuint');
 			});
+			$("#main_image").hover(
+				function(){
+					$(this).css( 'cursor', 'pointer' );
+				}
+			);
 			$("#main_image").click(function(){
 				$('html, body').animate({
 				    scrollTop: $("#load").offset().top
