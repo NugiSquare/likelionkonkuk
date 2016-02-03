@@ -61,14 +61,22 @@ body {
 	/*vertical centered ends.*/
 	max-width: 532px;
 }
+/*
 #menu_nav {
+	z-index: 200;
 	margin-bottom: 80px;
 }
 .main-nav-scrolled {
+	z-index: 200;
   position: fixed;
   width: 100%;
   top: 0;
  }
+ */
+#menu_bar {
+	position: relative;
+	top: 80vh;
+}
 .bt {
 	/*display: inline;
 	margin-left: 3vh;
