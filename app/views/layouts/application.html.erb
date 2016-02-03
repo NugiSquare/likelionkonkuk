@@ -119,7 +119,7 @@
 			});
 			$("#bt_review_norm").click(function(){
 				$('html, body').animate({
-				    scrollTop: $("#review").offset().top
+				    scrollTop: ($("#review").offset().top + document.getElementById('review').clientHeight * 0.43)
 				}, 1300, 'easeInOutQuint');
 			});
 			$("#bt_3_norm").click(function(){

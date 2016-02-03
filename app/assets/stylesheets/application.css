@@ -78,9 +78,8 @@ body {
 	top: 80vh;
 }
 .bt {
-	/*display: inline;
-	margin-left: 3vh;
-	margin-right: 3vh;*/
+	margin-left: 35px;
+	margin-right: 35px;
 }
 #intro_page {
 	height: 100%;
@@ -91,6 +90,10 @@ body {
 	width: 100%;
 }
 #third_lion {
+	height: 100%;
+	width: 100%;
+}
+#contact_frame {
 	height: 100%;
 	width: 100%;
 }
