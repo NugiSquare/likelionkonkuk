@@ -27,7 +27,7 @@
 	</script>
 	<script>
 	   $(document).ready(function(){
-			//load
+			//load begins.
 			window.setInterval(function() {
 				$("#load_bt_norm").effect("pulsate",1000)
 			}, 10000);
@@ -55,9 +55,9 @@
 				    scrollTop: $("#load").offset().top
 				}, 1300, 'easeInOutQuint');
 			});
+			//load ends.
 			
-			
-	   		//nav
+	   		//nav begins.
 	   		/*
 	   		$(window).resize(function(){
 		   		var mn = $("#menu_nav");
@@ -75,7 +75,9 @@
 				});
 			}).resize();
 			*/
+			//nav ends.
 			
+			//menu starts.
 			$("#bt_intro_norm").hover(
 				function(){
 					$(this).css( 'cursor', 'pointer' );
@@ -112,7 +114,9 @@
 					$(this).attr("src", "/assets/main/bt_contact_norm.png");
 				}
 			);
+			//menu ends.
 			
+			//menu_bar begins.
 			$("#bt_intro_norm").click(function(){
 				$('html, body').animate({
 				    scrollTop: $("#intro_page").offset().top
@@ -125,7 +129,7 @@
 			});
 			$("#bt_3_norm").click(function(){
 				$('html, body').animate({
-				    scrollTop: $("#third_lion").offset().top
+				    scrollTop: ($("#third_lion").offset().top + document.getElementById('third_lion').clientHeight * 0.40)
 				}, 1300, 'easeInOutQuint');
 			});
 			$("#bt_contact_norm").click(function(){
@@ -133,7 +137,37 @@
 				    scrollTop: $("#contact").offset().top
 				}, 1300, 'easeInOutQuint');
 			});
+			//menu_bar ends.
 			
+			//contact starts.
+			$("#bt_lionpage_norm").hover(
+				function(){
+					$(this).css( 'cursor', 'pointer' );
+					$(this).attr("src", "/assets/contact/bt_lionpage_hover.png");
+				},
+				function(){
+					$(this).attr("src", "/assets/contact/bt_lionpage_norm.png");
+				}
+			);
+			$("#bt_lionface_norm").hover(
+				function(){
+					$(this).css( 'cursor', 'pointer' );
+					$(this).attr("src", "/assets/contact/bt_lionface_hover.png");
+				},
+				function(){
+					$(this).attr("src", "/assets/contact/bt_lionface_norm.png");
+				}
+			);
+			$("#bt_kuface_norm").hover(
+				function(){
+					$(this).css( 'cursor', 'pointer' );
+					$(this).attr("src", "/assets/contact/bt_kuface_hover.png");
+				},
+				function(){
+					$(this).attr("src", "/assets/contact/bt_kuface_norm.png");
+				}
+			);
+			//contact ends.
 		});
 	</script>
 
