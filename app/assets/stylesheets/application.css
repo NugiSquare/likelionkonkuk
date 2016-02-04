@@ -20,12 +20,11 @@
 	height: 70px; 
 	z-index: 1;
 }
-
 body {
 	background-image: url("/assets/bg.jpg");
 	background-repeat: repeat;
 	margin: 0;
-	z-index: 0;
+	text-align: center;
 }
 #load {
 	height: 100vh;
@@ -90,8 +89,23 @@ body {
 	height: 100%;
 	width: 100%;
 }
+#review_clone {
+	position: fixed;
+	width: 100%;
+	left: 0;
+}
+#third {
+	position:relative;
+}
 #third_lion {
 	height: 100%;
+	width: 100%;
+}
+#third_content {
+}
+#third_front {
+	position: absolute;
+	left: 0;
 	width: 100%;
 }
 #contact {
@@ -112,6 +126,9 @@ body {
 }
 #contact_title {
 	margin-top: 15vh;
+}
+.cct {
+	margin-left:0 auto;
 }
 .cbts {
 	margin: 5vh;

@@ -12,164 +12,183 @@
 <%= yield %>
 
 	<script type="text/javascript" src="/assets/skrollr.min.js"></script>
-	<script type="text/javascript" src="/assets/skrollr.menu.min.js"></script>
 	<script type="text/javascript" src="/assets/jquery-1.12.0.min.js"></script>
 	<script type="text/javascript" src="/assets/jquery-ui.min.js"></script>
+	
 	<script>
-		//skrollr begins.
-		var s = skrollr.init({
+	//skrollr begins.
+	var s = skrollr.init({
+	});
+	/*
+	if(isScrolledIntoView("#intro_page") == 1) {
+		s.refresh($("#review_clone"));
+		console.log("work");
+	}
+	function isScrolledIntoView(elem)
+	{
+	    var $elem = $(elem);
+	    var $window = $(window);
+	
+	    var docViewTop = $window.scrollTop();
+	    var docViewBottom = docViewTop + $window.height();
+	
+	    var elemTop = $elem.offset().top;
+	    var elemBottom = elemTop + $elem.height();
+	
+	    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+	}
+	*/
+	//skrollr ends.
+	
+	$(document).ready(function(){
+		$("#third_front").attr("style", "height:"+document.getElementById('third_lion').clientHeight * 0.40+"px;");
+		$("#third_back").attr("style", "top:"+document.getElementById('third_lion').clientHeight * 0.40+"px;" + "height:"+document.getElementById('third_lion').clientHeight * 0.60+"px;");
+		$(window).resize(function(){
+			$("#third_front").attr("style", "height:"+document.getElementById('third_lion').clientHeight * 0.40+"px;");
+			$("#third_back").attr("style", "top:"+document.getElementById('third_lion').clientHeight * 0.40+"px;" + "height:"+document.getElementById('third_lion').clientHeight * 0.60+"px;");
+		}).resize();
+		//load begins.
+		window.setInterval(function() {
+			$("#load_bt_norm").effect("pulsate",1000)
+		}, 10000);
+		$("#load_bt_norm").hover(
+			function(){
+				$(this).css( 'cursor', 'pointer' );
+				$(this).attr("src", "/assets/before_load/load_bt_hover.png");
+			},
+			function(){
+				$(this).attr("src", "/assets/before_load/load_bt_norm.png");
+			}
+		);
+		$("#load_bt_norm").click(function(){
+			$('html, body').animate({
+			    scrollTop: $("#menu").offset().top
+			}, 1300, 'easeInOutQuint');
 		});
-		//skrollr ends.
+		$("#main_image").hover(
+			function(){
+				$(this).css( 'cursor', 'pointer' );
+			}
+		);
+		$("#main_image").click(function(){
+			$('html, body').animate({
+			    scrollTop: $("#load").offset().top
+			}, 1300, 'easeInOutQuint');
+		});
+		//load ends.
 		
-		//skrollr menu begins.
-		//skrollr.menu.init();
-		//skrollr menu ends.
-	</script>
-	<script>
-	   $(document).ready(function(){
-			//load begins.
-			window.setInterval(function() {
-				$("#load_bt_norm").effect("pulsate",1000)
-			}, 10000);
-			$("#load_bt_norm").hover(
-				function(){
-					$(this).css( 'cursor', 'pointer' );
-					$(this).attr("src", "/assets/before_load/load_bt_hover.png");
-				},
-				function(){
-					$(this).attr("src", "/assets/before_load/load_bt_norm.png");
-				}
-			);
-			$("#load_bt_norm").click(function(){
-				$('html, body').animate({
-				    scrollTop: $("#menu").offset().top
-				}, 1300, 'easeInOutQuint');
+		//nav begins.
+		/*
+		$(window).resize(function(){
+	   		var mn = $("#menu_nav");
+	   		h0 = $(window).outerHeight();
+			h1 = $('#load').outerHeight();
+			h2 = $('#to_main').outerHeight();
+			h3 = $('#menu').outerHeight();
+			hx = h1 + h2 + h3 - 150
+			$(window).scroll(function() {
+			  if( $(this).scrollTop() > hx ) {
+			    mn.addClass("main-nav-scrolled");
+			  } else {
+			    mn.removeClass("main-nav-scrolled");
+			  }
 			});
-			$("#main_image").hover(
-				function(){
-					$(this).css( 'cursor', 'pointer' );
-				}
-			);
-			$("#main_image").click(function(){
-				$('html, body').animate({
-				    scrollTop: $("#load").offset().top
-				}, 1300, 'easeInOutQuint');
-			});
-			//load ends.
-			
-	   		//nav begins.
-	   		/*
-	   		$(window).resize(function(){
-		   		var mn = $("#menu_nav");
-		   		h0 = $(window).outerHeight();
-				h1 = $('#load').outerHeight();
-				h2 = $('#to_main').outerHeight();
-				h3 = $('#menu').outerHeight();
-				hx = h1 + h2 + h3 - 150
-				$(window).scroll(function() {
-				  if( $(this).scrollTop() > hx ) {
-				    mn.addClass("main-nav-scrolled");
-				  } else {
-				    mn.removeClass("main-nav-scrolled");
-				  }
-				});
-			}).resize();
-			*/
-			//nav ends.
-			
-			//menu starts.
-			$("#bt_intro_norm").hover(
-				function(){
-					$(this).css( 'cursor', 'pointer' );
-					$(this).attr("src", "/assets/main/bt_intro_hover.png");
-				},
-				function(){
-					$(this).attr("src", "/assets/main/bt_intro_norm.png");
-				}
-			);
-			$("#bt_review_norm").hover(
-				function(){
-					$(this).css( 'cursor', 'pointer' );
-					$(this).attr("src", "/assets/main/bt_review_hover.png");
-				},
-				function(){
-					$(this).attr("src", "/assets/main/bt_review_norm.png");
-				}
-			);
-			$("#bt_3_norm").hover(
-				function(){
-					$(this).css( 'cursor', 'pointer' );
-					$(this).attr("src", "/assets/main/bt_3_hover.png");
-				},
-				function(){
-					$(this).attr("src", "/assets/main/bt_3_norm.png");
-				}
-			);
-			$("#bt_contact_norm").hover(
-				function(){
-					$(this).css( 'cursor', 'pointer' );
-					$(this).attr("src", "/assets/main/bt_contact_hover.png");
-				},
-				function(){
-					$(this).attr("src", "/assets/main/bt_contact_norm.png");
-				}
-			);
-			//menu ends.
-			
-			//menu_bar begins.
-			$("#bt_intro_norm").click(function(){
-				$('html, body').animate({
-				    scrollTop: $("#intro_page").offset().top
-				}, 1300, 'easeInOutQuint');
-			});
-			$("#bt_review_norm").click(function(){
-				$('html, body').animate({
-				    scrollTop: ($("#review").offset().top + document.getElementById('review').clientHeight * 0.43)
-				}, 1300, 'easeInOutQuint');
-			});
-			$("#bt_3_norm").click(function(){
-				$('html, body').animate({
-				    scrollTop: ($("#third_lion").offset().top + document.getElementById('third_lion').clientHeight * 0.40)
-				}, 1300, 'easeInOutQuint');
-			});
-			$("#bt_contact_norm").click(function(){
-				$('html, body').animate({
-				    scrollTop: $("#contact").offset().top
-				}, 1300, 'easeInOutQuint');
-			});
-			//menu_bar ends.
-			
-			//contact starts.
-			$("#bt_lionpage_norm").hover(
-				function(){
-					$(this).css( 'cursor', 'pointer' );
-					$(this).attr("src", "/assets/contact/bt_lionpage_hover.png");
-				},
-				function(){
-					$(this).attr("src", "/assets/contact/bt_lionpage_norm.png");
-				}
-			);
-			$("#bt_lionface_norm").hover(
-				function(){
-					$(this).css( 'cursor', 'pointer' );
-					$(this).attr("src", "/assets/contact/bt_lionface_hover.png");
-				},
-				function(){
-					$(this).attr("src", "/assets/contact/bt_lionface_norm.png");
-				}
-			);
-			$("#bt_kuface_norm").hover(
-				function(){
-					$(this).css( 'cursor', 'pointer' );
-					$(this).attr("src", "/assets/contact/bt_kuface_hover.png");
-				},
-				function(){
-					$(this).attr("src", "/assets/contact/bt_kuface_norm.png");
-				}
-			);
-			//contact ends.
+		}).resize();
+		*/
+		//nav ends.
+		
+		//menu starts.
+		$("#bt_intro_norm").hover(
+			function(){
+				$(this).css( 'cursor', 'pointer' );
+				$(this).attr("src", "/assets/main/bt_intro_hover.png");
+			},
+			function(){
+				$(this).attr("src", "/assets/main/bt_intro_norm.png");
+			}
+		);
+		$("#bt_review_norm").hover(
+			function(){
+				$(this).css( 'cursor', 'pointer' );
+				$(this).attr("src", "/assets/main/bt_review_hover.png");
+			},
+			function(){
+				$(this).attr("src", "/assets/main/bt_review_norm.png");
+			}
+		);
+		$("#bt_3_norm").hover(
+			function(){
+				$(this).css( 'cursor', 'pointer' );
+				$(this).attr("src", "/assets/main/bt_3_hover.png");
+			},
+			function(){
+				$(this).attr("src", "/assets/main/bt_3_norm.png");
+			}
+		);
+		$("#bt_contact_norm").hover(
+			function(){
+				$(this).css( 'cursor', 'pointer' );
+				$(this).attr("src", "/assets/main/bt_contact_hover.png");
+			},
+			function(){
+				$(this).attr("src", "/assets/main/bt_contact_norm.png");
+			}
+		);
+		//menu ends.
+		
+		//menu_bar begins.
+		$("#bt_intro_norm").click(function(){
+			$('html, body').animate({
+			    scrollTop: $("#intro_page").offset().top
+			}, 1300, 'easeInOutQuint');
 		});
+		$("#bt_review_norm").click(function(){
+			$('html, body').animate({
+			    scrollTop: ($("#review").offset().top + document.getElementById('review').clientHeight * 0.43)
+			}, 1300, 'easeInOutQuint');
+		});
+		$("#bt_3_norm").click(function(){
+			$('html, body').animate({
+			    scrollTop: ($("#third_lion").offset().top + document.getElementById('third_lion').clientHeight * 0.40)
+			}, 1300, 'easeInOutQuint');
+		});
+		$("#bt_contact_norm").click(function(){
+			$('html, body').animate({
+			    scrollTop: $("#contact").offset().top
+			}, 1300, 'easeInOutQuint');
+		});
+		//menu_bar ends.
+		
+		//contact starts.
+		$("#bt_lionpage_norm").hover(
+			function(){
+				$(this).css( 'cursor', 'pointer' );
+				$(this).attr("src", "/assets/contact/bt_lionpage_hover.png");
+			},
+			function(){
+				$(this).attr("src", "/assets/contact/bt_lionpage_norm.png");
+			}
+		);
+		$("#bt_lionface_norm").hover(
+			function(){
+				$(this).css( 'cursor', 'pointer' );
+				$(this).attr("src", "/assets/contact/bt_lionface_hover.png");
+			},
+			function(){
+				$(this).attr("src", "/assets/contact/bt_lionface_norm.png");
+			}
+		);
+		$("#bt_kuface_norm").hover(
+			function(){
+				$(this).css( 'cursor', 'pointer' );
+				$(this).attr("src", "/assets/contact/bt_kuface_hover.png");
+			},
+			function(){
+				$(this).attr("src", "/assets/contact/bt_kuface_norm.png");
+			}
+		);
+		//contact ends.
+	});
 	</script>
-
 </body>
 </html>
