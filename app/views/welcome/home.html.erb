@@ -1,22 +1,24 @@
 <div id="skrollr-body">
 	<div id="load">
-		<img data-anchor-target="#to_main" data-start="position:fixed;visibility:visible;" data-center="position:fixed;visibility:hidden;" id="load_bt_norm" src="/assets/before_load/load_bt_norm.png" alt="Load bt norm">
+		<img data-anchor-target="#to_main" data-start="transform:translate(0,0vh);visibility:visible;" data-center="transform:translate(0,100vh);visibility:hidden;" id="load_bt_norm" src="/assets/before_load/load_bt_norm.png" alt="Load bt norm">
 	</div>
-	<img id="to_main" src="/assets/main/to_main.png" alt="To main">
+	<div id="to_main"></div>
 	<div id="menu">
-		<img data-anchor-target="#to_main" data-start="position:fixed;visibility:hidden;" data-center="position:fixed;visibility:visible;" data-top-bottom="position:absolute;visibility:visible;" id="main_image" src="/assets/main/main_image.png" alt="Main image">
+		<img data-anchor-target="#to_main" data-start="transform:translate(0,0vh);visibility:hidden;" data-center="transform:translate(0,-100vh);visibility:visible;" data-top-bottom="transform:translate(0,0vh);visibility:visible;" id="main_image" src="/assets/main/main_image.png" alt="Main image">
 		<!--  nav id="menu_nav"-->
 		<div id="menu_bar">
 			<img class="bt" id="bt_intro_norm" src="/assets/main/bt_intro_norm.png" alt="Bt intro norm">
 			<img class="bt" id="bt_review_norm" src="/assets/main/bt_review_norm.png" alt="Bt review norm">
 			<img class="bt" id="bt_3_norm" src="/assets/main/bt_3_norm.png" alt="Bt 3 norm">
 			<img class="bt" id="bt_contact_norm" src="/assets/main/bt_contact_norm.png" alt="Bt contact norm">
-		<!-- </nav> -->
 		</div>
+		<!-- </nav> -->
 	</div>
-	<img id="intro_page" src="/assets/intro/intro_page.png" alt="Intro page">
-	<div style="height: 50vh;"></div>
+<!--
+	<img data-bottom="transform:translate(0,0vh);" data-top-bottom="transform:translate(0,100vh);" id="intro_page" src="/assets/intro/intro_page.png" alt="Intro page">
 	<img id="review" src="/assets/review/review.png" alt="Review">
+-->
+<!--
 	<img data-anchor-target="#third_front" data-start="visibility:hidden;" data-bottom-top="visibility:visible;bottom:0%;" data-top="visibility:visible;bottom:0%;" data-bottom="visibility:visible;bottom:0%;" data-top-bottom="visibility:visible;bottom:100%;" id="review_clone" src="/assets/review/review.png" alt="Review">
 	<div id="third">
 		<div id="third_content">

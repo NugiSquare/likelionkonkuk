@@ -18,6 +18,7 @@
 	<script>
 	//skrollr begins.
 	var s = skrollr.init({
+		smoothScrolling: true
 	});
 	/*
 	if(isScrolledIntoView("#intro_page") == 1) {
@@ -184,11 +185,11 @@
 		//contact ends.
 	});
 	$("#third_front").attr("style", "height:"+document.getElementById('third_lion').clientHeight * 0.40+"px;");
+	$("#third_back").attr("style", "top:"+document.getElementById('third_lion').clientHeight * 0.40+"px;" + "height:"+document.getElementById('third_lion').clientHeight * 0.60+"px;");
+	$(window).resize(function(){
+		$("#third_front").attr("style", "height:"+document.getElementById('third_lion').clientHeight * 0.40+"px;");
 		$("#third_back").attr("style", "top:"+document.getElementById('third_lion').clientHeight * 0.40+"px;" + "height:"+document.getElementById('third_lion').clientHeight * 0.60+"px;");
-		$(window).resize(function(){
-			$("#third_front").attr("style", "height:"+document.getElementById('third_lion').clientHeight * 0.40+"px;");
-			$("#third_back").attr("style", "top:"+document.getElementById('third_lion').clientHeight * 0.40+"px;" + "height:"+document.getElementById('third_lion').clientHeight * 0.60+"px;");
-		}).resize();
+	}).resize();
 	</script>
 </body>
 </html>

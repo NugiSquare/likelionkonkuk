@@ -27,6 +27,7 @@ body {
 	text-align: center;
 }
 #load {
+	position: relative;
 	height: 100vh;
 }
 #load_bt_norm {
@@ -40,11 +41,12 @@ body {
 	max-width: 397px;
 }
 #to_main {
-	z-index: 100;
 	position: relative;
-	height: 100%;
-	width: 100%;
-	margin: auto;
+	z-index: 2;
+	height: 100vh;
+	background-image: url("/assets/main/to_main.png");
+	background-size: contain;
+	background-repeat: repeat-x;
 }
 #menu {
 	position: relative;
@@ -82,11 +84,11 @@ body {
 	margin-right: 35px;
 }
 #intro_page {
-	height: 100%;
+	z-index: 3;
 	width: 100%;
 }
 #review {
-	height: 100%;
+	z-index: 5;
 	width: 100%;
 }
 #review_clone {
@@ -98,7 +100,6 @@ body {
 	position:relative;
 }
 #third_lion {
-	height: 100%;
 	width: 100%;
 }
 #third_content {
@@ -113,7 +114,6 @@ body {
 	height: 100vh;
 }
 #contact_frame {
-	height: 100%;
 	width: 100%;
 }
 #contact_content {
