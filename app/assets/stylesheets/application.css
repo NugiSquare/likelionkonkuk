@@ -84,36 +84,33 @@ body {
 	margin-right: 35px;
 }
 #intro_page {
-	z-index: 3;
+	position: relative;
+	z-index: 1;
 	width: 100%;
 }
 #review {
-	z-index: 5;
+	position: relative;
+	z-index: 2;
 	width: 100%;
-}
-#review_clone {
-	position: fixed;
-	width: 100%;
-	left: 0;
 }
 #third {
 	position:relative;
-}
-#third_lion {
-	width: 100%;
-}
-#third_content {
+	z-index: 3;
 }
 #third_front {
-	position: absolute;
-	left: 0;
 	width: 100%;
+}
+#third_back {
+	width: 100%;
+	background-image: url("/assets/bg.jpg");
+	background-repeat: repeat;
 }
 #contact {
 	position: relative;
 	height: 100vh;
 }
 #contact_frame {
+	height: 100%;
 	width: 100%;
 }
 #contact_content {
@@ -125,11 +122,17 @@ body {
     /*vertical centered ends.*/
 }
 #contact_title {
-	margin-top: 15vh;
-}
-.cct {
-	margin-left:0 auto;
+	margin-top: 25vh;
 }
 .cbts {
-	margin: 5vh;
+	margin: 2vh;
+}
+#bt_lionpage_norm {
+	width: 18vh;
+}
+#bt_lionface_norm {
+	width: 18vh;
+}
+#bt_kuface_norm {
+	width: 12vh;
 }

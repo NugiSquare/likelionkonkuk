@@ -7,7 +7,7 @@
   <%= csrf_meta_tags %>
   
 </head>
-<body>
+<body onload="s.refresh()">
 
 <%= yield %>
 
@@ -18,7 +18,7 @@
 	<script>
 	//skrollr begins.
 	var s = skrollr.init({
-		smoothScrolling: true
+		/*smoothScrolling: true*/
 	});
 	/*
 	if(isScrolledIntoView("#intro_page") == 1) {
@@ -190,6 +190,17 @@
 		$("#third_front").attr("style", "height:"+document.getElementById('third_lion').clientHeight * 0.40+"px;");
 		$("#third_back").attr("style", "top:"+document.getElementById('third_lion').clientHeight * 0.40+"px;" + "height:"+document.getElementById('third_lion').clientHeight * 0.60+"px;");
 	}).resize();
+	
+	</script>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	
+	  ga('create', 'UA-73959971-1', 'auto');
+	  ga('send', 'pageview');
+	
 	</script>
 </body>
 </html>
