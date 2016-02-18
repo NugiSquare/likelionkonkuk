@@ -108,6 +108,8 @@ body {
 #contact {
 	position: relative;
 	height: 100vh;
+	background-image: url("/assets/bg.jpg");
+	background-repeat: repeat;
 }
 #contact_frame {
 	height: 100%;
