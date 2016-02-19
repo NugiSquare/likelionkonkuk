@@ -12,13 +12,21 @@
 <%= yield %>
 
 	<script type="text/javascript" src="/assets/skrollr.min.js"></script>
+	<script type="text/javascript" src="/assets/skrollr.menu.min.js"></script>
 	<script type="text/javascript" src="/assets/jquery-1.12.0.min.js"></script>
 	<script type="text/javascript" src="/assets/jquery-ui.min.js"></script>
 	
 	<script>
 	//skrollr begins.
 	var s = skrollr.init({
-		/*smoothScrolling: true*/
+		easing: {
+        	easeInOutQuint: function(t) { return t<.5 ? 16*t*t*t*t*t : 1+16*(--t)*t*t*t*t }
+		}
+        /* smoothScrolling: true*/
+	});
+	skrollr.menu.init(s, {
+		animate: true,
+		easing: 'easeInOutQuint'
 	});
 	/*
 	if(isScrolledIntoView("#intro_page") == 1) {
@@ -144,7 +152,7 @@
 		});
 		$("#bt_3_norm").click(function(){
 			$('html, body').animate({
-			    scrollTop: ($("#third_lion").offset().top + document.getElementById('third_lion').clientHeight * 0.40)
+			    scrollTop: $("#third_back").offset().top
 			}, 1300, 'easeInOutQuint');
 		});
 		$("#bt_contact_norm").click(function(){
