@@ -97,10 +97,10 @@ body {
 	position:relative;
 	z-index: 3;
 }
-#third_front {
+#third_top {
 	width: 100%;
 }
-#third_back {
+#third_bottom {
 	width: 100%;
 	background-image: url("/assets/bg.jpg");
 	background-repeat: repeat;
@@ -137,4 +137,18 @@ body {
 }
 #bt_kuface_norm {
 	width: 12vh;
+}
+#application {
+	padding-top: 25vh;
+}
+#apply {
+	display: inline-block;
+	width: 18vh;
+}
+#pdf {
+	display: inline-block;
+	width: 18vh;
+}
+h3 {
+	color: #F39803;
 }

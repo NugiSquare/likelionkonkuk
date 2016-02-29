@@ -5,7 +5,7 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <!--meta name="viewport" content="width=device-width, height=device-height"-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
 </head>
 <body onload="s.refresh()">
 
@@ -17,7 +17,29 @@
 	<script type="text/javascript" src="/assets/jquery-ui.min.js"></script>
 	
 	<script>
-	var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+	//window_width_check begins.
+	function window_width_check() {
+		var width = $(window).width();
+		if (width < 800) {
+			$("#intro_page").attr("src", "/assets/intro/intro_page_800.png");
+			$("#third_top").attr("src", "/assets/third/third_top_800.png");
+			$("#third_bottom").attr("src", "/assets/third/third_bottom_800.png");
+		}
+		else if (width > 1100) {
+			$("#third_top").attr("src", "/assets/third/third_top_1280.png");
+			$("#third_bottom").attr("src", "/assets/third/third_bottom_1280.png");
+		}
+		else {
+			$("#intro_page").attr("src", "/assets/intro/intro_page.png");
+			$("#third_top").attr("src", "/assets/third/third_top.png");
+			$("#third_bottom").attr("src", "/assets/third/third_bottom.png");
+		}
+	}
+	window_width_check();
+	$(window).resize(function(){
+		window_width_check();
+	}).resize();
+	//window_width_check ends.
 	
 	//skrollr begins.
 	var s = skrollr.init({
@@ -154,7 +176,7 @@
 		});
 		$("#bt_3_norm").click(function(){
 			$('html, body').animate({
-			    scrollTop: $("#third_back").offset().top
+			    scrollTop: $("#third_bottom").offset().top
 			}, 1300, 'easeInOutQuint');
 		});
 		$("#bt_contact_norm").click(function(){
