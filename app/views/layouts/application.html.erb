@@ -221,6 +221,23 @@
 			}
 		);
 		//contact ends.
+		
+		$("#apply").hover(
+			function(){
+				$(this).attr("src", "/assets/apply/apply_hover.png");
+			},
+			function(){
+				$(this).attr("src", "/assets/apply/apply_norm.png");
+			}
+		);
+		$("#pdf").hover(
+			function(){
+				$(this).attr("src", "/assets/apply/pdf_hover.png");
+			},
+			function(){
+				$(this).attr("src", "/assets/apply/pdf_norm.png");
+			}
+		);
 	});
 	/*
 	$("#third_front").attr("style", "height:"+document.getElementById('third_lion').clientHeight * 0.40+"px;");
