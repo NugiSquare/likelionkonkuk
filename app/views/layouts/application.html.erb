@@ -22,10 +22,10 @@
 		var width = $(window).width();
 		if (width < 640) {
 			$("#intro_page").attr("src", "/assets/intro/intro_page_640.png");
-			$("#review_top").attr("src", "/assets/review/review_top_800.png");
-			$("#review_bottom").attr("src", "/assets/review/review_bottom_800.png");
-			$("#third_top").attr("src", "/assets/third/third_top_800.png");
-			$("#third_bottom").attr("src", "/assets/third/third_bottom_800.png");
+			$("#review_top").attr("src", "/assets/review/review_top_640.png");
+			$("#review_bottom").attr("src", "/assets/review/review_bottom_640.png");
+			$("#third_top").attr("src", "/assets/third/third_top_640.png");
+			$("#third_bottom").attr("src", "/assets/third/third_bottom_640.png");
 		}
 		else if (width < 800) {
 			$("#intro_page").attr("src", "/assets/intro/intro_page_800.png");
@@ -35,6 +35,7 @@
 			$("#third_bottom").attr("src", "/assets/third/third_bottom_800.png");
 		}
 		else if (width > 1100) {
+			$("#intro_page").attr("src", "/assets/intro/intro_page.png");
 			$("#review_top").attr("src", "/assets/review/review_top_1280.png");
 			$("#review_bottom").attr("src", "/assets/review/review_bottom_1280.png");
 			$("#third_top").attr("src", "/assets/third/third_top_1280.png");
