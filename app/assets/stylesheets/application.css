@@ -88,7 +88,12 @@ body {
 	z-index: 1;
 	width: 100%;
 }
-#review {
+#review_top {
+	position: relative;
+	z-index: 2;
+	width: 100%;
+}
+#review_bottom {
 	position: relative;
 	z-index: 2;
 	width: 100%;
