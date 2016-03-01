@@ -137,7 +137,7 @@ body {
     /*vertical centered ends.*/
 }
 #contact_title {
-	margin-top: 25vh;
+	margin-top: 17vh;
 	width: 60%;
 	max-width: 293px;
 }
@@ -145,25 +145,32 @@ body {
 	margin: 2vh;
 }
 #bt_lionpage_norm {
-	width: 18vh;
+	width: 18%;
+	max-width: 224px;
 }
 #bt_lionface_norm {
-	width: 18vh;
+	width: 18%;
+	max-width: 224px;
 }
 #bt_kuface_norm {
-	width: 12vh;
+	width: 12%;
+	max-width: 142px;
 }
 #application {
-	padding-top: 25vh;
+	text-align: center;
 }
 #apply {
-	display: inline-block;
-	width: 18vh;
+	width: 18%;
+	max-width: 224px;
 }
 #pdf {
-	display: inline-block;
-	width: 18vh;
+	width: 18%;
+	max-width: 224px;
 }
 h3 {
 	color: #F39803;
+}
+#contact_email {
+	width: 80%;
+	max-width: 427px;
 }
