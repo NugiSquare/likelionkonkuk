@@ -12,7 +12,7 @@
 <%= yield %>
 
 	<script type="text/javascript" src="/assets/skrollr.min.js"></script>
-	<script type="text/javascript" src="/assets/skrollr.menu.min.js"></script>
+	<script type="text/javascript" src="/assets/skrollr.menu.js"></script>
 	<script type="text/javascript" src="/assets/jquery-1.12.0.min.js"></script>
 	<script type="text/javascript" src="/assets/jquery-ui.min.js"></script>
 	
@@ -56,7 +56,8 @@
 	});
 	skrollr.menu.init(s, {
 		animate: true,
-		easing: 'easeInOutQuint'
+		easing: 'easeInOutQuint',
+		duration: 1300
 	});
 	/*
 	if(isScrolledIntoView("#intro_page") == 1) {
@@ -93,21 +94,25 @@
 				$(this).attr("src", "/assets/before_load/load_bt_norm.png");
 			}
 		);
+		/*
 		$("#load_bt_norm").click(function(){
 			$('html, body').animate({
 			    scrollTop: $("#menu").offset().top
 			}, 1300, 'easeInOutQuint');
 		});
+		*/
 		$("#main_image").hover(
 			function(){
 				$(this).css( 'cursor', 'pointer' );
 			}
 		);
+		/*
 		$("#main_image").click(function(){
 			$('html, body').animate({
 			    scrollTop: $("#load").offset().top
 			}, 1300, 'easeInOutQuint');
 		});
+		*/
 		//load ends.
 		
 		//nav begins.
@@ -170,6 +175,7 @@
 		//menu ends.
 		
 		//menu_bar begins.
+		/*
 		$("#bt_intro_norm").click(function(){
 			$('html, body').animate({
 			    scrollTop: $("#intro_page").offset().top
@@ -190,6 +196,7 @@
 			    scrollTop: $("#contact").offset().top
 			}, 1300, 'easeInOutQuint');
 		});
+		*/
 		//menu_bar ends.
 		
 		//contact starts.
