@@ -138,6 +138,8 @@ body {
 }
 #contact_title {
 	margin-top: 25vh;
+	width: 60%;
+	max-width: 293px;
 }
 .cbts {
 	margin: 2vh;
