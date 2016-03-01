@@ -161,11 +161,11 @@ body {
 }
 #apply {
 	width: 18%;
-	max-width: 224px;
+	max-width: 100px;
 }
 #pdf {
 	width: 18%;
-	max-width: 224px;
+	max-width: 100px;
 }
 h3 {
 	color: #F39803;
